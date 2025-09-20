@@ -10,13 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
-SOURCES     = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
-HEADERS		= Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
+SOURCES     = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
+HEADERS		= Animal.hpp Dog.hpp Cat.hpp Brain.hpp
 OBJECTS_DIR = .objects/
 DEPENDS_DIR	= .deps/
 OBJECTS     = ${SOURCES:%.cpp=${OBJECTS_DIR}%.o}
 DEPS		= ${SOURCES:%.cpp=${DEPENDS_DIR}%.d}
-NAME		= Polymorphism
+NAME		= Abstract_class
 CXX         = c++
 CXX_FLAGS   = -Wall -Wextra -Werror -std=c++98
 DEPFLAGS	= -MT $@ -MMD -MP -MF $(DEPENDS_DIR)$*.d
