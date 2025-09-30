@@ -10,8 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
-SOURCES     = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp Materia.cpp
-HEADERS		= AMateria.hpp Character.hpp Cure.hpp Ice.hpp ICharacter.hpp IMateriaSource.hpp Materia.hpp
+SOURCES     = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
+HEADERS		= AMateria.hpp Character.hpp Cure.hpp Ice.hpp ICharacter.hpp IMateriaSource.hpp MateriaSource.hpp
 
 OBJECTS_DIR = .objects/
 DEPENDS_DIR	= .deps/

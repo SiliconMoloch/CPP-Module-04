@@ -2,27 +2,31 @@
 #define CHARACTER_HPP
 
 #include "ICharacter.hpp"
-#include "Materia.hpp"
+#include "AMateria.hpp"
 
 class AMateria;
 
 class Character : public ICharacter
 
 {
+	private:
+		std::string	_name;
+		AMateria*	_inventory[4];
+		AMateria*	_stash[64];
+		short		_stashSize;
 	public:
 		Character(void);
 		Character(const std::string& name);
 		Character(const Character& copy);
 		Character& operator=(const Character &copy);
-		~Character(void);
+		virtual ~Character(void);
 		
-		virtual std::string const& getName(void) const;
-		virtual void equip(AMateria* m);
-		virtual void unequip(int idx);
-		virtual void use(int idx, ICharacter& target);
-	private:
-		std::string	_name;
-		Materia	_inventory[4];
+		virtual std::string const& 	getName(void) const;
+		virtual void 				equip(AMateria* m);
+		virtual void 				unequip(int idx);
+		virtual void				use(int idx, ICharacter& target);
+		void						clearInventory(void);
+		void						copyInventory(Character const& other);
 };
 
 #endif

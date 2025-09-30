@@ -1,22 +1,22 @@
 #include "Ice.hpp"
+#include "ICharacter.hpp"
+#include <iostream>
 
-Ice::Ice(void)
+Ice::Ice(void) : AMateria("ice")
 
 {
 
 }
 
-Ice::Ice(const Cure& copy)
+Ice::Ice(Ice const &other) : AMateria(other._type)
 
 {
-	(void)copy;
-	return (*this);
+
 }
 
-Ice& Ice::operator=(const Cure& copy)
+Ice& 	Ice::operator=(Ice const&)
 
 {
-	(void)copy;
 	return (*this);
 }
 
@@ -26,8 +26,14 @@ Ice::~Ice(void)
 
 }
 
-/*Ice* Ice::clone(void)
+void	Ice::use(ICharacter& target)
 
 {
-	return (new(Ice));
-}*/
+	std::cout << "* shoots an ice bolt at " + target.getName() + " *" << std::endl;
+}
+
+AMateria*	Ice::clone(void) const
+
+{
+	return (new Ice(*this));
+}

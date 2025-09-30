@@ -1,5 +1,5 @@
 #ifndef CURE_HPP
-#define CURE _HPP
+#define CURE_HPP
 
 #include "AMateria.hpp"
 
@@ -8,11 +8,12 @@ class Cure : public AMateria
 {
 	public:
 		Cure(void);
-		Cure(const Cure& copy);
-		Cure& operator=(const Cure& copy);
-		~Cure(void);
-		//Cure* clone(void);
-	private:
+		Cure(Cure const& other);
+		Cure& operator=(Cure const&);
+		virtual ~Cure(void);
+
+		virtual AMateria* clone(void) const;
+		virtual void use(ICharacter& target);
 };
 
 #endif

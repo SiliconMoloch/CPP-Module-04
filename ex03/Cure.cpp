@@ -1,22 +1,22 @@
 #include "Cure.hpp"
+#include "ICharacter.hpp"
+#include <iostream>
 
-Cure::Cure(void)
+Cure::Cure(void) : AMateria("cure")
 
 {
-	
+
 }
 
-Cure::Cure(const Cure& copy)
+Cure::Cure(Cure const &other) : AMateria(other._type)
 
 {
-	(void)copy;
-	return (*this);
+
 }
 
-Cure& Cure::operator=(const Cure& copy)
+Cure& 	Cure::operator=(Cure const&)
 
 {
-	(void)copy;
 	return (*this);
 }
 
@@ -24,4 +24,16 @@ Cure::~Cure(void)
 
 {
 
+}
+
+void	Cure::use(ICharacter& target)
+
+{
+	std::cout << "* heals " + target.getName() + "'s wounds *" << std::endl;
+}
+
+AMateria*	Cure::clone(void) const
+
+{
+	return (new Cure(*this));
 }
