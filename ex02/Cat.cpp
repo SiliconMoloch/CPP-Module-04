@@ -1,6 +1,6 @@
 #include "Cat.hpp"
 
-Cat::Cat(const std::string& type) : Animal(type)
+Cat::Cat(void) : Animal("Cat")
 
 {
 	brain = new Brain();

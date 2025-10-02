@@ -70,11 +70,11 @@ void Character::equip(AMateria* m)
 void Character::unequip(int idx)
 
 {
-	if (idx < 0 || idx >= 4 || !_inventory[idx])
-		return ;
-	if (_stashSize < 64)
+	if (idx >= 0 && idx < 4 && _inventory[idx])
+	{
 		_stash[_stashSize++] = _inventory[idx];
-	_inventory[idx] = 0;
+		_inventory[idx] = 0;
+	}
 }
 
 void Character::use(int idx, ICharacter& target)
@@ -89,13 +89,7 @@ void Character::clearInventory(void)
 
 {
 	for (short i = 0; i < 4; ++i)
-	{
 		delete (_inventory[i]);
-		_inventory[i] = 0;
-	}
 	for (short i = 0; i < _stashSize; ++i)
-	{
 		delete (_stash[i]);
-		_stash[i] = 0;
-	}
 }

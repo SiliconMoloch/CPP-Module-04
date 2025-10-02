@@ -1,9 +1,9 @@
 #include "Dog.hpp"
 
-Dog::Dog(const std::string& type) : Animal(type)
+Dog::Dog(void) : Animal("Dog")
 
 {
-	std::cout << _type << " constructed!" << std::endl;
+	std::cout << _type << " constructed by default!" << std::endl;
 }
 
 Dog::Dog(const Dog& copy) : Animal(copy)

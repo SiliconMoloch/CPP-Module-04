@@ -8,8 +8,8 @@ class WrongAnimal {
 protected:
 	std::string _type;
 public:
-	WrongAnimal(const std::string& type);
 	WrongAnimal(void);
+	WrongAnimal(const std::string& type);
 	WrongAnimal(const WrongAnimal& copy);
 	WrongAnimal& operator=(const WrongAnimal& copy);
 	virtual ~WrongAnimal();

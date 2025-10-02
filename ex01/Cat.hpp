@@ -4,11 +4,13 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class Cat : public Animal {
+class Cat : public Animal
+
+{
 private:
 	Brain* brain;
 public:
-	Cat(const std::string &type = "Cat");
+	Cat(void);
 	Cat(const Cat& copy);
 	Cat& operator=(const Cat& copy);
 	~Cat(void);

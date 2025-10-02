@@ -1,9 +1,9 @@
 #include "Cat.hpp"
 
-Cat::Cat(const std::string& type) : Animal(type)
+Cat::Cat(void) : Animal("Cat")
 
 {
-	std::cout << _type << " constructed!" << std::endl;
+	std::cout << _type << " constructed by default!" << std::endl;
 }
 
 Cat::Cat(const Cat& copy) : Animal(copy)

@@ -3,10 +3,12 @@
 
 #include "Animal.hpp"
 
-class Cat : public Animal {
+class Cat : public Animal
+
+{
 public:
-	Cat(const std::string &type = "Cat");
-	Cat(const Animal& copy);
+	Cat(void);
+	Cat(const Cat& copy);
 	Cat& operator=(const Cat& copy);
 	~Cat(void);
 

@@ -1,6 +1,6 @@
 #include "Dog.hpp"
 
-Dog::Dog(const std::string& type) : Animal(type)
+Dog::Dog(void) : Animal("Dog")
 
 {
 	brain = new Brain();

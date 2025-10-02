@@ -5,7 +5,7 @@
 
 class Dog : public Animal {
 public:
-	Dog(const std::string& type = "Dog");
+	Dog(void);
 	Dog(const Dog& copy);
 	Dog& operator=(const Dog& copy);
 	~Dog(void);

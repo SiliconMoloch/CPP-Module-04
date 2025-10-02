@@ -5,8 +5,8 @@
 
 class WrongCat : public WrongAnimal {
 public:
-	WrongCat(const std::string &type = "Cat");
-	WrongCat(const WrongAnimal& copy);
+	WrongCat(void);
+	WrongCat(const WrongCat& copy);
 	WrongCat& operator=(const WrongCat& copy);
 	~WrongCat(void);
 

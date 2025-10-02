@@ -1,12 +1,12 @@
 #include "WrongCat.hpp"
 
-WrongCat::WrongCat(const std::string& type) : WrongAnimal(type)
+WrongCat::WrongCat(void) : WrongAnimal("Cat")
 
 {
-	std::cout << _type << " constructed!" << std::endl;
+	std::cout << _type << " constructed by default!" << std::endl;
 }
 
-WrongCat::WrongCat(const WrongAnimal& copy) : WrongAnimal(copy)
+WrongCat::WrongCat(const WrongCat& copy) : WrongAnimal(copy)
 
 {
 	std::cout << _type << " copy constructed!" << std::endl;
