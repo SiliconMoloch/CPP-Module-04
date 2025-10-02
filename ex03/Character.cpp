@@ -89,7 +89,14 @@ void Character::clearInventory(void)
 
 {
 	for (short i = 0; i < 4; ++i)
+	{
 		delete (_inventory[i]);
+		_inventory[i] = 0;
+	}
 	for (short i = 0; i < _stashSize; ++i)
+	{
 		delete (_stash[i]);
+		_stash[i] = 0;
+	}
+	_stashSize = 0;
 }
