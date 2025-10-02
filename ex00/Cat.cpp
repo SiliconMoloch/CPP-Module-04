@@ -6,7 +6,7 @@ Cat::Cat(const std::string& type) : Animal(type)
 	std::cout << _type << " constructed!" << std::endl;
 }
 
-Cat::Cat(const Animal& copy) : Animal(copy)
+Cat::Cat(const Cat& copy) : Animal(copy)
 
 {
 	std::cout << _type << " copy constructed!" << std::endl;
