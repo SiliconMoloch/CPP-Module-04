@@ -6,7 +6,7 @@
 #    By: yabokhar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/09 15:37:00 by yabokhar          #+#    #+#              #
-#    Updated: 2025/10/02 18:32:47 by yabokhar         ###   ########.fr        #
+#    Updated: 2025/10/02 18:40:38 by yabokhar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ OBJECTS     = ${SOURCES:%.cpp=${OBJECTS_DIR}%.o}
 DEPS		= ${SOURCES:%.cpp=${DEPENDS_DIR}%.d}
 NAME		= Interface_and_recap
 CXX         = c++
-CXX_FLAGS   = -Wall -Wextra -Werror -std=c++98 -g3
+CXX_FLAGS   = -Wall -Wextra -Werror -std=c++98
 DEPFLAGS	= -MT $@ -MMD -MP -MF $(DEPENDS_DIR)$*.d
 
 all: ${NAME}
